@@ -150,15 +150,15 @@ h3{
 .gap{
     gap: 15px;
 }
-/* .play{
+.play{
     position: relative;
     bottom: 170px;
     left: 100px;
     font-size: 65px;
-    /* display: none; */
-
-.play:hover{
     display: block;
+}
+.play:hover{
+    display: none;
 }
 
 /*****************************************
@@ -183,7 +183,11 @@ h3{
 #sidebar ul li{
     margin: 20px 0;
 }
-
+.install{
+    display: flex;
+    align-content: flex-end;
+    align-self: flex-end;
+}
 
 
 /*************************** 
@@ -227,6 +231,9 @@ h3{
 }
 .align-c{
     align-items: center;
+}
+.f-end{
+    align-items: flex-end;
 }
 
 /*******************************************
