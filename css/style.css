@@ -171,3 +171,17 @@ h3{
 .f-wrap{
     flex-wrap: wrap;
 }
+
+/*******************************************
+            MEDIA QUERY 
+*******************************************/
+@media screen and (max-width: 992px){
+    .card{
+        width: calc(100% / 4 - 15px);
+    }
+}
+@media screen and (max-width: 768px){
+    .card{
+        width: calc(100% / 2 - 15px);
+    }  
+}
