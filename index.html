@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- FONT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Spotify Web</title>
 </head>
+
 <body>
     <div class="wrapper">
         <div class="content d-flex">
             <div class="header"></div>
             <div id="sidebar"></div>
             <main>
-                <div class="ul-container debug">
+                <div class="ul-container">
                     <ul class="d-flex j-space-between">
                         <li><a href="#in-evidenza">in evidenza</a></li>
                         <li><a href="#podcast">podcast</a></li>
@@ -26,10 +32,57 @@
                         <li><a href="#scopri">scopri</a></li>
                     </ul>
                 </div>
+                <h2>Recently played</h2>
+                <section id="recently" class="container d-flex f-wrap gap">
+                    <div class="card">
+                        <img class="card-img" src="img/metal_lifting.jpg" alt="Heavy Metal">
+                        <div class="play"><i class="fa-regular fa-circle-play"></i></div>
+                        <div>
+                            <h3 class="text-center">Heavy Metal</h3>
+                            <div class="grey text-center">Subtitle</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/stranger.jpeg" alt="Stranger Things">
+                        <div>
+                            <h3 class="text-center">Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)</h3>
+                            <div class="grey text-center">Kyle Dixon & Micheal Stein</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/aquietplace.jpeg" alt="A quiet place">
+                        <div>
+                            <h3 class="text-center">A quiet place</h3>
+                            <div class="grey text-center">Subtitle</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/split.jpeg" alt="Split">
+                        <div>
+                            <h3 class="text-center">Split</h3>
+                            <div class="grey text-center">Subtitle</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/cure.jpeg" alt="A cure for wellness">
+                        <div>
+                            <h3 class="text-center">A cure for wellness</h3>
+                            <div class="grey text-center">Subtitle</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/sinister.jpeg" alt="Sinister">
+                        <div>
+                            <h3 class="text-center">Sinister</h3>
+                            <div class="grey text-center">Subtitle</div>
+                        </div>
+                    </div>
+                </section>
             </main>
         </div>
-            <div id="toolbar"></div>
-        
+        <div id="toolbar"></div>
+
     </div>
 </body>
+
 </html>
