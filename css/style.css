@@ -14,9 +14,15 @@ body {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    color: var(--color-text);
 }
-
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--color-text);
+    text-transform: uppercase;
+}
 :root {
     --color-primary: #080b12;
     --color-background-content: #141922;
@@ -62,7 +68,22 @@ main {
     overflow-y: auto;
     padding: 100px 20px 20px 20px;
 }
-
+.ul-container{
+    padding: 10px 10px;
+    width: 900px;
+    margin: 0 auto;
+}
+li a{
+    color: var(--color-side-bar-text);
+}
+li a:hover{
+    color: var(--color-text);
+}
+ul li:hover {
+    border-bottom: 3px solid rgb(173, 255, 48);
+    
+    overflow: hidden;
+}
 .header {
     background-color: rgba(0, 0, 0, 0.835);
     height: 80px;
@@ -75,4 +96,7 @@ main {
 /* flex-utility */
 .d-flex {
     display: flex;
+}
+.j-space-between{
+    justify-content: space-between;
 }
