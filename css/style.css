@@ -93,11 +93,11 @@ ul li:hover {
     overflow: hidden;
 }
 /***********  END ***********/
-#recently h2{
+.recently-title{
     padding: 25px 35px;
 }
 #created h2, #creaded, .grey{
-    padding: 25px 0;
+    padding: 15px 0;
 }
 
 h3{
@@ -137,7 +137,9 @@ h3{
 .container{
     padding: 20px;
 }
-
+.circle-photo{
+    border-radius: 50%;
+}
 
 
 
