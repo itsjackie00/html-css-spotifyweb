@@ -76,10 +76,7 @@ html {
     z-index: 3000;
     width: calc(100% - 200px);
 }
-/* ALIGN UTILITY */
-.text-center{
-    text-align: center;
-}
+
 
 
 .button{
@@ -99,7 +96,13 @@ html {
     transform: scale(1.1);
     background-color: var(--color-underline);
 }
-
+.header a:hover{
+    color: var(--color-background-content);
+}
+/* ALIGN UTILITY */
+.text-center{
+    text-align: center;
+}
 /****************************************** 
          MAIN
 ******************************************/
@@ -174,8 +177,12 @@ h3{
     margin: 5px 0px;
     filter: invert(42%) sepia(9%) saturate(7%) hue-rotate(336deg) brightness(101%) contrast(84%);
 }
-
-
+#sidebar h5{
+    text-transform: uppercase;
+}
+#sidebar ul li{
+    margin: 20px 0;
+}
 
 
 
