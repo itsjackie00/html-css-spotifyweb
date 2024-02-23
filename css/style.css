@@ -63,6 +63,38 @@ html {
 .grey{
     color: var(--color-side-bar-text);
 }
+
+/******************************************** 
+         HEADER
+********************************************/
+.button{
+    border: 1px solid var(--color-text);
+    border-radius: 30px;
+    padding: 7px 25px;
+    align-self: center;
+    margin-right: 20px;
+    transition: 2s;
+}
+.header{
+    justify-content: flex-end;
+    display: flex;
+}
+.button:hover{
+    transition: 1s;
+    transform: scale(1.1);
+    background-color: var(--color-underline);
+}
+
+
+
+
+
+
+
+
+
+
+
 /****************************************** 
          MAIN
 ******************************************/
