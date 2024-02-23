@@ -85,16 +85,6 @@ html {
     background-color: var(--color-underline);
 }
 
-
-
-
-
-
-
-
-
-
-
 /****************************************** 
          MAIN
 ******************************************/
@@ -164,6 +154,7 @@ h3{
 }
 .card img:hover{
     opacity: 50%;
+    cursor: pointer;
 }
 /* container */
 .container{
