@@ -93,9 +93,13 @@ ul li:hover {
     overflow: hidden;
 }
 /***********  END ***********/
-h2{
+#recently h2{
     padding: 25px 35px;
 }
+#created h2, #creaded, .grey{
+    padding: 25px 0;
+}
+
 h3{
     padding: 10px 0;
 }
@@ -106,13 +110,13 @@ h3{
 .gap{
     gap: 15px;
 }
-.play{
+/* .play{
     position: relative;
     bottom: 170px;
     left: 100px;
     font-size: 65px;
     /* display: none; */
-}
+
 .play:hover{
     display: block;
 }
