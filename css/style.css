@@ -18,14 +18,7 @@ body {
 li{
     list-style: none;
 }
-a{
-    text-decoration: none;
-}
-main ul li a{
-    text-decoration: none;
-    color: var(--color-text);
-    text-transform: uppercase;
-}
+
 :root {
     --color-primary: #080b12;
     --color-background-content: #141922;
@@ -108,31 +101,31 @@ nav a::after{
 ******************************************/
 main {
     width: calc(100% - 200px);
-    flex-grow: 1;
+    /* flex-grow: 1; */
     background-color: var(--color-background-content);
     padding-top: 100px;
     overflow-y: auto;
-    padding: 100px 20px 20px 20px;
     color: var(--color-text);
 }
 /***** UL LI A UTILITY *****/
-.ul-container{
-    padding: 10px 10px;
-    width: 900px;
-    margin: 0 auto;
-}
-li a{
+a{
     color: var(--color-side-bar-text);
+    text-decoration: none;
+    display: block;
+}
+nav a{
+    padding: 10px;
+    text-transform: uppercase;
+}
+nav a.active::after,
+nav a:hover::after{
+    background-color: var(--color-underline);
 }
 li a:hover{
     color: var(--color-text);
 }
 main ul li{
     border-bottom: 3px solid transparent;
-}
-main ul li:hover {
-    border-bottom: 3px solid rgb(173, 255, 48);
-    overflow: hidden;
 }
 /***********  END ***********/
 .recently-title{
@@ -143,14 +136,17 @@ main ul li:hover {
 }
 
 h3{
-    padding: 10px 0;
+    padding: 10px;
+    font-size: 1em;
 }
 /******* SECTION RECENTLY *******/
 .card{
-    width: calc(100% / 6 - 15px);
+    width: calc(100% / 6);
+    cursor: pointer;;
 }
-.gap{
-    gap: 15px;
+nav, .card{
+    padding: 20px 10px;
+    font-size: 0.8em;
 }
 .play{
     position: relative;
@@ -171,13 +167,17 @@ h3{
     min-height: 480px;
     overflow: hidden;
     background-color: var(--color-primary);
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
 }
 #sidebar{
     color: var(--color-side-bar-text);
 }
 #sidebar ul li{
     border-left: 3px solid transparent;
+}
+#sidebar a.active::after,
+#sidebar a:hover::after{
+    background-color: var(--color-underline);
 }
 #sidebar ul li:hover {
     border-left: 3px solid rgb(173, 255, 48);
@@ -187,10 +187,6 @@ h3{
    text-transform: uppercase;
    color: var(--color-text);
    margin: 30px 0;
-}
-
-.icons{
-    filter: invert(42%) sepia(9%) saturate(7%) hue-rotate(336deg) brightness(101%) contrast(84%);
 }
 
 #sidebar ul li{
@@ -231,6 +227,10 @@ h3{
 #sidebar .playlist{
     min-height: 0;
 }
+.text-sidebar{
+    display: inline ;
+}
+.new-play
 #sidebar .playlist ul{
     height: calc(100% - 30px);
     overflow-y: auto;
@@ -276,10 +276,6 @@ hr{
 .card img:hover{
     opacity: 50%;
     cursor: pointer;
-}
-.icons{
-    width: 30px;
-    height: 30px;
 }
 
 img{
@@ -344,21 +340,62 @@ img{
 /*******************************************
             MEDIA QUERY 
 *******************************************/
+@media screen and (max-width:1200px){
+    .f-wrap{
+        flex-wrap: wrap;
+    }
+    .card{
+        width: calc(100% / 4 );
+    }
+}
 @media screen and (max-width: 992px){
     .card{
-        width: calc(100% / 4 - 15px);
+        width: calc(100% / 3);
     }
 }
 @media screen and (max-width: 768px){
     .card{
-        width: calc(100% / 2 - 15px);
+        width: calc(100% / 2);
     }  
 }
-@media screen and(max-width: 576px){
+@media screen and (max-width: 576px){
     #sidebar{
         width: 50px;
     }
-    main {
+    #sidebar h3, #sidebar .new-playlist{
+        display: none;
+    }
+   #sidebar .sidebar-top,
+   #sidebar .sidebar-bottom {
+    padding: 10px;
+   }
+   #sidebar #logo{
+    display: none;
+   }
+   #sidebar #logo-small{
+    display: block;
+    padding: 0px;
+   }
+    main{
         width: calc(100% - 50px);
     }
+    .header{
+        width: calc(100% - 50px);
+        position: fixed;
+        top: 0;
+        left: 50px;
+    }
+    .text-sidebar{
+        display: none;
+    }
+
+    #sidebar .nav img{
+        justify-content: center;
+
+    }
+}
+@media screen and (max-width: 400px){
+    .card{
+        width: 100%;
+    } 
 }

@@ -26,8 +26,8 @@
                     </a>
                 </div>
             </div>
-            <div id="sidebar" class="debug d-flex f-column">
-                <div class="sidebar-top debug">
+            <div id="sidebar" class="d-flex f-column">
+                <div class="sidebar-top">
                     <div id="logo">
                         <img src="img/logo.svg" alt="Spootify Logo">
                     </div>
@@ -36,38 +36,38 @@
                     </div>
                     <ul class="nav">
                         <li>
-                            <a href="#" class="icons">
+                            <a href="#" class="active">
                                 <img src="img/home.svg" alt="Home">
-                                <span>Home</span>
+                                <span class="text-sidebar">Home</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="icons">
-                                <img src="img/search.svg" alt="Home">
-                                <span>Cerca</span>
+                            <a href="#">
+                                <img src="img/search.svg" alt="Cerca">
+                                <span class="text-sidebar">Cerca</span>
                             </a>
-                        </li>
+                        </li> 
                         <li>
-                            <a href="#" class="icons">
-                                <img src="img/libreria.svg" alt="Home">
-                                <span>La tua libreria</span>
+                            <a href="#">
+                                <img src="img/libreria.svg" alt="Libreria">
+                                <span class="text-sidebar">La tua libreria</span>
                             </a>
                         </li>
                     </ul>
                     <div class="playlist">
                         <div class="add-playlist">
                             <h3>Playlist</h3>
-                            <i class="fa-solid fa-square-plus fa-2xl"></i>
-                            Crea playlist
+                            <i class="fa-solid fa-square-plus fa-2xl new-playlist"></i>
+                            <span class="new-playlist">Crea playlist</span>
                         </div>
                         <ul>
-                            <li><a href="#">Nuova Playlist</a></li>
-                            <li><a href="#">Nuova Playlist</a></li>
-                            <li><a href="#">Nuova Playlist</a></li>
-                            <li><a href="#">Nuova Playlist</a></li>
-                            <li><a href="#">Nuova Playlist</a></li>
-                            <li><a href="#">Nuova Playlist</a></li>
-                            <li><a href="#">Nuova Playlist</a></li>
+                            <li><a href="#" class="new-playlist">Nuova Playlist</a></li>
+                            <li><a href="#" class="new-playlist">Nuova Playlist</a></li>
+                            <li><a href="#" class="new-playlist">Nuova Playlist</a></li>
+                            <li><a href="#" class="new-playlist">Nuova Playlist</a></li>
+                            <li><a href="#" class="new-playlist">Nuova Playlist</a></li>
+                            <li><a href="#" class="new-playlist">Nuova Playlist</a></li>
+                            <li><a href="#" class="new-playlist">Nuova Playlist</a></li>
                         </ul>
                     </div>
                 </div>
@@ -76,73 +76,112 @@
                         <div class="install">
                             <img id="dowload" src="img/download.svg" alt="Dowload">
                         </div>
-                        <div class="install-text">
+                        <div class="install-text new-playlist">
                             Install app
                         </div>
                     </div>
-                    <hr>
+                    <hr class="new-playlist">
                     <div class="account d-flex">
                         <img id="profile" src="img/profile.svg" alt="Profile">
-                        <h4>John Doe</h4>
+                        <h4 class="new-playlist">John Doe</h4>
                     </div>
                 </div>
             </div>
             <main>
-                <div class="ul-container">
-                    <ul class="d-flex j-space-between">
-                        <li><a href="#in-evidenza">in evidenza</a></li>
-                        <li><a href="#podcast">podcast</a></li>
-                        <li><a href="#classifiche">classifiche</a></li>
-                        <li><a href="#generi-e-mood">generi e mood</a></li>
-                        <li><a href="#nuove-uscite">nuove uscite</a></li>
-                        <li><a href="#scopri">scopri</a></li>
+                <nav class="d-flex j-center">
+                    <ul class="d-flex j-space-between align-c f-wrap">
+                        <li>
+                            <a href="#in-evidenza" class="active">
+                                in evidenza
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#podcast">
+                                podcast
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#classifiche">
+                                classifiche
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#generi-e-mood">
+                                generi e mood
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#nuove-uscite">
+                                nuove uscite
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#scopri">
+                                scopri
+                            </a>
+                        </li>
                     </ul>
-                </div>
-                <h2 class="recently-title">Recently played</h2>
-                <section id="recently" class="container d-flex f-wrap gap">
-                    <div class="card">
-                        <img class="card-img" src="img/metal_lifting.jpg" alt="Heavy Metal">
-                        <div class="play hide"><i class="fa-regular fa-circle-play"></i></div>
-                        <div>
-                            <h3 class="text-center">Heavy Metal</h3>
-                            <div class="grey text-center">Subtitle</div>
-                        </div>
+                </nav>
+                <section id="recently" class="d-flex f-wrap">
+                    <div class="recently-title">
+                        <h2>Recently played</h2>
                     </div>
-                    <div class="card">
-                        <img src="img/stranger.jpeg" alt="Stranger Things">
-                        <div>
-                            <h3 class="text-center">Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)</h3>
-                            <div class="grey text-center">Kyle Dixon & Micheal Stein</div>
+                    <div class="row d-flex f-wrap container">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/metal_lifting.jpg" alt="Heavy Metal">
+                            </div>
+                            <div class="text-center">
+                                <h3>Heavy Metal</h3>
+                                <div class="grey text-center">Subtitle</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <img src="img/aquietplace.jpeg" alt="A quiet place">
-                        <div>
-                            <h3 class="text-center">A quiet place</h3>
-                            <div class="grey text-center">Subtitle</div>
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/stranger.jpeg" alt="Stranger Things">
+                            </div>
+                            <div>
+                                <h3 class="text-center">Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)
+                                </h3>
+                                <div class="grey text-center">Kyle Dixon & Micheal Stein</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <img src="img/split.jpeg" alt="Split">
-                        <div>
-                            <h3 class="text-center">Split</h3>
-                            <div class="grey text-center">Subtitle</div>
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/aquietplace.jpeg" alt="A quiet place">
+                            </div>
+                            <div class="text-center">
+                                <h3>A quiet place</h3>
+                                <div class="grey text-center">Subtitle</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <img src="img/cure.jpeg" alt="A cure for wellness">
-                        <div>
-                            <h3 class="text-center">A cure for wellness</h3>
-                            <div class="grey text-center">Subtitle</div>
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/split.jpeg" alt="Split">
+                            </div>
+                            <div class="text-center">
+                                <h3>Split</h3>
+                                <div class="grey text-center">Subtitle</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <img src="img/sinister.jpeg" alt="Sinister">
-                        <div>
-                            <h3 class="text-center">Sinister</h3>
-                            <div class="grey text-center">Subtitle</div>
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/cure.jpeg" alt="A cure for wellness">
+                            </div>
+                            <div class="text-center">
+                                <h3>A cure for wellness</h3>
+                                <div class="grey text-center">Subtitle</div>
+                            </div>
                         </div>
-                    </div>
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/sinister.jpeg" alt="Sinister">
+                            </div>
+                            <div class="text-center">
+                                <h3>Sinister</h3>
+                                <div class="grey text-center">Subtitle</div>
+                            </div>
+                        </div>
                 </section>
                 <section id="created" class="container">
                     <h2>Creato per John Doe</h2>
