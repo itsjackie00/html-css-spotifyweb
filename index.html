@@ -36,43 +36,55 @@
                     </div>
                     <ul class="nav">
                         <li>
-                            <a href="#" class="active">
+                            <a href="#" class="icons">
                                 <img src="img/home.svg" alt="Home">
                                 <span>Home</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="img/home.svg" alt="Home">
-                                <span>Home</span>
+                            <a href="#" class="icons">
+                                <img src="img/search.svg" alt="Home">
+                                <span>Cerca</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="img/home.svg" alt="Home">
-                                <span>Home</span>
+                            <a href="#" class="icons">
+                                <img src="img/libreria.svg" alt="Home">
+                                <span>La tua libreria</span>
                             </a>
                         </li>
                     </ul>
-                </div>
-
-
-                <div class="playlist debug">
-                    <div class="add-playlist">
-                        <!-- div o pseudoelemento -->
-                        Crea playlist
+                    <div class="playlist">
+                        <div class="add-playlist">
+                            <h3>Playlist</h3>
+                            <i class="fa-solid fa-square-plus fa-2xl"></i>
+                            Crea playlist
+                        </div>
+                        <ul>
+                            <li><a href="#">Nuova Playlist</a></li>
+                            <li><a href="#">Nuova Playlist</a></li>
+                            <li><a href="#">Nuova Playlist</a></li>
+                            <li><a href="#">Nuova Playlist</a></li>
+                            <li><a href="#">Nuova Playlist</a></li>
+                            <li><a href="#">Nuova Playlist</a></li>
+                            <li><a href="#">Nuova Playlist</a></li>
+                        </ul>
                     </div>
-                    <ul>
-                        <li><a href="#">Nuova Playlist</a></li>
-                        <li><a href="#">Nuova Playlist</a></li>
-                        <li><a href="#">Nuova Playlist</a></li>
-                        <li><a href="#">Nuova Playlist</a></li>
-                        <li><a href="#">Nuova Playlist</a></li>
-                        <li><a href="#">Nuova Playlist</a></li>
-                        <li><a href="#">Nuova Playlist</a></li>
-                        <li><a href="#">Nuova Playlist</a></li>
-                    </ul>
-                    <div class="sidebar-bottom debug"></div>
+                </div>
+                <div class="sidebar-bottom">
+                    <div class="d-flex">
+                        <div class="install">
+                            <img id="dowload" src="img/download.svg" alt="Dowload">
+                        </div>
+                        <div class="install-text">
+                            Install app
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="account d-flex">
+                        <img id="profile" src="img/profile.svg" alt="Profile">
+                        <h4>John Doe</h4>
+                    </div>
                 </div>
             </div>
             <main>
@@ -162,7 +174,36 @@
                 </section>
             </main>
         </div>
-        <div id="toolbar"></div>
+        <div id="toolbar" class="d-flex j-space-between">
+            <div class="toolbar-left debug d-flex align-c">
+                <div class="toolbar-left-img debug">img</div>
+                <div class="toolbar-left-text debug">text</div>
+                <div class="toolbar-left-heart debug">heart</div>
+                <div class="toolbar-left-file debug">file</div>
+
+            </div>
+            <div class="toolbar-center debug">
+                <div class="toolbar-center-top debug d-flex j-center align-c">
+                    <div class="debug">1</div>
+                    <div class="debug">2</div>
+                    <div class="debug">1</div>
+                    <div class="debug">2</div>
+                    <div class="debug">1</div>
+                </div>
+                <div class="toolbar-center-bottom debug d-flex j-center align-c">
+                    <div class="debug">1</div>
+                    <div class="debug">2</div>
+                    <div class="debug">1</div>
+
+                </div>
+            </div>
+            <div class="toolbar-right debug d-flex j-end align-c">
+                <div class="toolbar-right-list debug">list</div>
+                <div class="toolbar-right-screen debug">screen</div>
+                <div class="toolbar-right-audio debug">audio</div>
+                <div class="toolbar-right-volume debug">volume</div>
+            </div>
+        </div>
 
     </div>
 </body>

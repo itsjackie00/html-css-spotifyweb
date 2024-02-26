@@ -43,12 +43,7 @@ html {
 .wrapper {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.654);
-    /* overflow: hidden; */
-}
-
-#toolbar {
-    background-color: var(--color-toolbar);
-    height: 90px;
+    overflow: hidden;
 }
 
 .content {
@@ -57,14 +52,18 @@ html {
     background-color: var(--color-background-content);
 }
 
-#sidebar {
-    width: 200px;
-    background-color: var(--color-primary);
-    flex-shrink: 0;
-}
+
 /***** COLOR UTILITY ****/
 .grey{
     color: var(--color-side-bar-text);
+}
+nav a::after{
+    content: "";
+    display: block;
+    height: 3px;
+    margin: 0 auto;
+    width: 60%;
+    background: transparent;
 }
 
 /******************************************* 
@@ -128,9 +127,11 @@ li a{
 li a:hover{
     color: var(--color-text);
 }
-ul li:hover {
+main ul li{
+    border-bottom: 3px solid transparent;
+}
+main ul li:hover {
     border-bottom: 3px solid rgb(173, 255, 48);
-    
     overflow: hidden;
 }
 /***********  END ***********/
@@ -166,29 +167,36 @@ h3{
         SIDE BAR
 *******************************************/
 #sidebar{
+    width: 200px;
+    min-height: 480px;
+    overflow: hidden;
+    background-color: var(--color-primary);
+    flex-shrink: 0;
+}
+#sidebar{
     color: var(--color-side-bar-text);
 }
-#sidebar p{
-    margin-left: 10px;
+#sidebar ul li{
+    border-left: 3px solid transparent;
 }
-.logo{
-    margin: 15px;
+#sidebar ul li:hover {
+    border-left: 3px solid rgb(173, 255, 48);
+    overflow: hidden;
 }
+#sidebar h3{
+   text-transform: uppercase;
+   color: var(--color-text);
+   margin: 30px 0;
+}
+
 .icons{
-    margin: 5px 0px;
     filter: invert(42%) sepia(9%) saturate(7%) hue-rotate(336deg) brightness(101%) contrast(84%);
 }
-#sidebar h5{
-    text-transform: uppercase;
-}
+
 #sidebar ul li{
     margin: 20px 0;
 }
-.install{
-    display: flex;
-    align-content: flex-end;
-    align-self: flex-end;
-}
+
 #logo-small{
     display: none;
     padding: 5px;
@@ -196,10 +204,13 @@ h3{
 #sidebar .sidebar-top{
     height: calc(100% - 80px);
     width: 100%;
+    overflow: hidden;
+    padding: 20px;
 }
 #sidebar .sidebar-bottom{
     height: 80px;
     width: 100%;
+    padding: 5px 20px;
 }
 #sidebar .nav img{
     opacity: 0.8;
@@ -221,8 +232,36 @@ h3{
     min-height: 0;
 }
 #sidebar .playlist ul{
-    height: 100%;
+    height: calc(100% - 30px);
     overflow-y: auto;
+}
+#dowload,
+#profile{
+    width: 20px;
+    margin-right: 5px;
+    filter: invert(42%) sepia(9%) saturate(7%) hue-rotate(336deg) brightness(101%) contrast(84%);
+}
+.install, .install-text{
+    cursor: pointer;
+}
+hr{
+    width: 170px;
+    margin: 0 auto;
+    filter: invert(42%) sepia(9%) saturate(7%) hue-rotate(336deg) brightness(101%) contrast(84%);
+    margin: 5px 0;
+}
+.account{
+    padding-top: 10px;
+}
+#profile{
+    border-radius: 60%;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(343deg) brightness(106%) contrast(101%);
+    background-color: grey;
+    cursor: pointer; 
+} 
+#sidebar h4{
+    color: var(--color-text);
+    cursor: pointer;
 }
 /*************************** 
          IMAGE UTILITY 
@@ -255,6 +294,26 @@ img{
 .circle-photo{
     border-radius: 50%;
 }
+/****************************************** 
+   TOOLBAR
+*******************************************/
+#toolbar {
+    background-color: var(--color-toolbar);
+    height: 90px;
+}
+
+#toolbar{
+    color: var(--color-text);
+}
+.toolbar-left,
+.toolbar-right{
+    width: 20%;
+}
+.toolbar-center{
+    flex-grow: 1;
+}
+
+
 
 /* flex-utility */
 .d-flex {
@@ -268,12 +327,19 @@ img{
 }
 .align-c{
     align-items: center;
+    align-content: center;
 }
 .f-end{
     align-items: flex-end;
 }
 .f-column{
     flex-direction: column;
+}
+.j-center{
+    justify-content: center;
+}
+.j-end{
+    justify-content: flex-end;
 }
 /*******************************************
             MEDIA QUERY 
