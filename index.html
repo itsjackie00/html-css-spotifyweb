@@ -17,12 +17,12 @@
 </head>
 
 <body>
-<!-- 
+    <!-- 
     WRAPPER 
 -->
     <div class="wrapper">
         <div class="content d-flex">
-<!--
+            <!--
     HEADER 
 -->
             <div class="header">
@@ -32,7 +32,7 @@
                     </a>
                 </div>
             </div>
-<!--
+            <!--
     SIDEBAR
 -->
             <div id="sidebar" class="d-flex f-column">
@@ -63,7 +63,7 @@
                             </a>
                         </li>
                     </ul>
-<!-- 
+                    <!-- 
     PLAYLIST 
 -->
                     <div class="playlist">
@@ -83,13 +83,15 @@
                         </ul>
                     </div>
                 </div>
-<!--
+                <!--
     SIDEBAR BOTTOM
 -->
                 <div class="sidebar-bottom">
                     <div class="d-flex">
                         <div class="install">
-                            <img id="dowload" src="img/download.svg" alt="Dowload">
+                            <a href="#">
+                                <img id="dowload" src="img/download.svg" alt="Dowload">
+                            </a>
                         </div>
                         <div class="install-text new-playlist">
                             Install app
@@ -102,11 +104,11 @@
                     </div>
                 </div>
             </div>
-<!--
+            <!--
     MAIN 
 -->
             <main>
-<!--
+                <!--
     NAV 
 -->
                 <nav class="d-flex j-center">
@@ -143,7 +145,7 @@
                         </li>
                     </ul>
                 </nav>
-<!--
+                <!--
     SECTION RECENTLY
 -->
                 <section id="recently" class="d-flex f-wrap">
@@ -208,7 +210,7 @@
                         </div>
                     </div>
                 </section>
-<!--
+                <!--
     SECTION CREATED
 -->
                 <section id="created" class="container">
@@ -216,16 +218,20 @@
                     <div class="grey">Più ascolti, più accurati saranno i suggerumenti.</div>
                     <div class="d-flex f-wrap gap">
                         <div class="card">
-                            <img src="img/radar.jpeg" alt="Il tuo release radar">
+                            <div class="card-img">
+                                <img src="img/radar.jpeg" alt="Il tuo released radar">
+                            </div>
                             <h3 class="text-center">Release Radar</h3>
                         </div>
                         <div class="card">
-                            <img src="img/mixdaily.jpeg" alt="Daily Mix 1">
+                            <div class="card-img">
+                                <img src="img/mixdaily.jpeg" alt="Il tuo daily mix">
+                            </div>
                             <h3 class="text-center">Daily Mix 1</h3>
                         </div>
                     </div>
                 </section>
-<!--
+                <!--
     SECTION POPULAR
 -->
                 <section id="popular" class="container">
@@ -233,18 +239,22 @@
                     <div class="grey">Più ascolti, più saranno i suggerimenti.</div>
                     <div class=" d-flex f-wrap gap text-center">
                         <div class="card">
-                            <img class="circle-photo" src="img/youg.jpeg" alt="Young">
+                            <div class="card-img">
+                                <img class="circle-photo" src="img/youg.jpeg" alt="Lana del rey">
+                            </div>
                             <h3>Lana del Rey</h3>
                         </div>
                         <div class="card">
-                            <img class="circle-photo" src="img/einaudi.jpeg" alt="Ludovico Einaudi">
+                            <div class="card-img">
+                                <img class="circle-photo" src="img/einaudi.jpeg" alt="Ludovico Einaudi">
+                            </div>
                             <h3>Ludovico Einaudi</h3>
                         </div>
                     </div>
                 </section>
             </main>
         </div>
-<!--
+        <!--
     TOLBAR LEFT
 -->
         <div id="toolbar" class="d-flex j-space-between container">
@@ -266,7 +276,7 @@
                 </ul>
 
             </div>
-<!--
+            <!--
     TOLBAR CENTER 
 -->
             <div class="toolbar-center">
@@ -289,7 +299,7 @@
                     </ul>
                 </div>
             </div>
-<!--
+            <!--
     TOLBAR RIGHT
 -->
             <div class="toolbar-right d-flex j-end align-c f-wrap">
