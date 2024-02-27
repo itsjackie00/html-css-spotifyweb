@@ -12,7 +12,6 @@
 /* general */
 body {
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-style: normal;
 }
 li{
@@ -70,6 +69,7 @@ nav a::after{
     left: 200px;
     z-index: 3000;
     width: calc(100% - 200px);
+    overflow-y: hidden;
 }
 
 .button{
@@ -79,6 +79,7 @@ nav a::after{
     align-self: center;
     margin-right: 20px;
     transition: 2s;
+    text-transform: uppercase;
 }
 .header{
     justify-content: flex-end;
@@ -165,7 +166,7 @@ nav, .card{
 #sidebar{
     width: 200px;
     min-height: 480px;
-    overflow: hidden;
+    overflow-y: hidden;
     background-color: var(--color-primary);
     /* flex-shrink: 0; */
 }
@@ -174,6 +175,9 @@ nav, .card{
 }
 #sidebar ul li{
     border-left: 3px solid transparent;
+}
+.add-playlist:hover{
+    cursor: pointer;  
 }
 #sidebar a.active::after,
 #sidebar a:hover::after{
@@ -296,6 +300,7 @@ img{
 #toolbar {
     background-color: var(--color-toolbar);
     height: 90px;
+    color: var(--color-text);
 }
 #toolbar img{
     width: 50px;
@@ -304,8 +309,8 @@ img{
 #toolbar .fa-heart{
     padding: 0 20px;
 }
-#toolbar{
-    color: var(--color-text);
+#toolbar small{
+    margin-left: 20px ;
 }
 .toolbar-left,
 .toolbar-right{
@@ -330,8 +335,9 @@ img{
     border-radius: 5px;
     display: flex;
     align-self: center;
-    margin: 0 50px;
+    margin: 0 20px;
     transition: 1s;
+    margin-top: 10px;
 }
 .progress-bar:hover{
     cursor: pointer;
@@ -346,7 +352,7 @@ img{
     height: 100%;
     background-color: var(--color-text);
     border-radius: 5px;
-    width: 50%;
+    width: 10%;
 }
 .toolbar-center-top ul li i:hover,
 .toolbar-right ul li i:hover{
@@ -368,6 +374,7 @@ img{
     align-self: center;
     margin: 0 10px;
     transition: 1s;
+    cursor: pointer;
 }
 /* flex-utility */
 .d-flex {
@@ -405,16 +412,59 @@ img{
     .card{
         width: calc(100% / 4 );
     }
+    .toolbar-left,
+    .toolbar-right{
+    width: 40%;
+    }
+    #toolbar .toolbar-center-bottom ul li{
+        display: none;
+    }
+    .toolbar-right .progress-bar-2{
+        display: none;
+    }
 }
+
 @media screen and (max-width: 992px){
     .card{
         width: calc(100% / 3);
+    }
+
+    #toolbar .toolbar-left{
+        display: flex;
+    }
+    #toolbar .toolbar-left img{
+        width: 25px;
+    }
+    #toolbar .toolbar-left h4{
+        display: none;
+    }
+    #toolbar .toolbar-left small{
+        margin-left: 5px;        
+    }
+    #toolbar .toolbar-center-bottom .progress-bar{
+        width: 350px;
+        height: 5px;
+}
+    .toolbar-center ul li i{
+    margin-left: 20px;
+    font-size: 1.2em;
     }
 }
 @media screen and (max-width: 768px){
     .card{
         width: calc(100% / 2);
-    }  
+    } 
+    #toolbar .toolbar-left img{
+       display: none;
+    }
+    #toolbar .toolbar-center-bottom .progress-bar{
+            width: 250px;
+            height: 4px;
+    }
+    .toolbar-center ul li i{
+        margin-left: 15px;
+        font-size: 1em;
+    }
 }
 @media screen and (max-width: 576px){
     #sidebar{
