@@ -140,19 +140,19 @@ h3{
     font-size: 1em;
 }
 /******* SECTION RECENTLY *******/
-.card{
+.my-card{
     width: calc(100% / 6);
     cursor: pointer;
     overflow: hidden;
 }
-.card-img{
+.my-card-img{
     position: relative;
 }
-#recently .card img{
+#recently .my-card img{
     width: 100%;
     display: block;
 }
-.card:hover .card-img:after{
+.my-card:hover .my-card-img:after{
     content: "\f144";
     font-family: "Font Awesome 6 Free";
     font-size: 4em;
@@ -167,13 +167,41 @@ h3{
     background-color: rgba(0, 0, 0, 0.486);
 }
 
-nav, .card{
+nav, .my-card{
     padding: 20px 10px;
     font-size: 0.8em;
 }
 
 .play:hover{
     display: none;
+}
+/*****************************************
+        PLAYLIST
+*******************************************/
+#playlist-btn button{
+    border-radius: 25%;
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+.playlist-card-img{
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+}
+.playlist-card-img img{
+    border-radius: 6% 0 0 6%;
+}
+.playlist-mix-text{
+    width: 200px;
+}
+.text-card{
+    background-color: var(--color-toolbar);
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 6% 6% 0;
+}
+.contenitore-card-playlist{
+    border-radius: 5%;
 }
 
 /*****************************************
@@ -287,14 +315,14 @@ hr{
 /*************************** 
          IMAGE UTILITY 
 ****************************/
-.card img{
+.my-card img{
     width: 100%;
 
 }
-.card-img{
+.my-card-img{
     position: relative;
 }
-.card img:hover{
+.my-card img:hover{
     opacity: 50%;
     cursor: pointer;
 }
@@ -427,7 +455,7 @@ img{
     .f-wrap{
         flex-wrap: wrap;
     }
-    .card{
+    .my-card{
         width: calc(100% / 4 );
     }
     .toolbar-left,
@@ -443,7 +471,7 @@ img{
 }
 
 @media screen and (max-width: 992px){
-    .card{
+    .my-card{
         width: calc(100% / 3);
     }
 
@@ -469,7 +497,7 @@ img{
     }
 }
 @media screen and (max-width: 768px){
-    .card{
+    .my-card{
         width: calc(100% / 2);
     } 
     #toolbar .toolbar-left img{
@@ -521,7 +549,7 @@ img{
     }
 }
 @media screen and (max-width: 400px){
-    .card{
+    .my-card{
         width: 100%;
     } 
 }
