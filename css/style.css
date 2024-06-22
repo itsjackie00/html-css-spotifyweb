@@ -58,9 +58,9 @@ html {
     height: 80px;
     position: fixed;
     top: 0;
-    left: 200px;
+    left: 240px;
     z-index: 3000;
-    width: calc(100% - 200px);
+    width: calc(100% - 240px);
     overflow-y: hidden;
 }
 nav a::after{
@@ -205,10 +205,55 @@ nav, .my-card{
 }
 
 /*****************************************
+        JUMBOTRON
+*******************************************/
+#jumbotron-container{
+    width: 100%;
+    min-height: 300px;
+    background-color: black;
+    background-image: linear-gradient(to bottom, transparent 0%, #1E1E1E 100%);
+}
+#jumbotron-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid white;
+}
+#jumbotron-text-container{
+    width: 50%;
+    height: 100%;
+}
+.dropdown-menu {
+    display: none; /* Nascondiamo il menu per default */
+    position: absolute;
+    background-color: var(--color-toolbar); /* Background scuro */
+    color: #fff; /* Testo bianco */
+    border: 1px solid #343a40;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    min-width: 2rem;
+    z-index: 1000; /* Assicura che il menu appaia sopra altri elementi */
+    width: 210px;
+}
+
+.dropdown-menu.show {
+    display: block; /* Mostriamo il menu quando ha la classe 'show' */
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #495057; /* Cambia il background quando si passa sopra con il mouse */
+}
+
+/*****************************************
         SIDE BAR
 *******************************************/
 #sidebar{
-    width: 200px;
+    width: 250px;
     min-height: 480px;
     overflow-y: hidden;
     background-color: var(--color-primary);
@@ -247,15 +292,9 @@ nav, .my-card{
     padding: 5px;
 }
 #sidebar .sidebar-top{
-    height: calc(100% - 80px);
     width: 100%;
     overflow: hidden;
     padding: 20px;
-}
-#sidebar .sidebar-bottom{
-    height: 80px;
-    width: 100%;
-    padding: 5px 20px;
 }
 #sidebar .nav img{
     opacity: 0.8;
@@ -265,7 +304,7 @@ nav, .my-card{
     vertical-align: bottom;
 }
 #sidebar ul .nav li a{
-    padding: 0 5px 0 10px;
+    padding: 0 10px 0 10px;
     border-left: 5px solid transparent;
 }
 #sidebar ul .nav li a .active,
@@ -312,6 +351,25 @@ hr{
     color: var(--color-text);
     cursor: pointer;
 }
+.library{
+    filter: opacity(0.5) drop-shadow(0 0 0 white);
+    width: 20px;
+}
+
+.irrelevant{
+    color: #080B13;
+    text-decoration: none;
+}
+
+.sidebar-playlist-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10%;
+}
+
 /*************************** 
          IMAGE UTILITY 
 ****************************/
